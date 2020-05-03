@@ -1,0 +1,326 @@
+//ОБнуление всех стилей.===============================================================================================================
+@import "null.scss";
+//Обнуление всех стилей.===============================================================================================================
+//Миксины====================================================
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 0;}
+//Миксины====================================================
+
+
+//Подключение шрифтов==================================================================================================================
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@font-face {
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	src: url('../fonts/AkzidenzGroteskBQCondensedBold.eot');
+	src: local('☺'), url('../fonts/AkzidenzGroteskBQCondensedBold.woff') format('woff'), url('../fonts/AkzidenzGroteskBQCondensedBold.ttf') format('truetype'), url('../fonts/AkzidenzGroteskBQCondensedBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Bebas'; 
+	src: url('../fonts/BebasNeueRegular.eot');
+	src: local('☺'), url('../fonts/BebasNeueRegular.woff') format('woff'), url('../fonts/BebasNeueRegular.ttf') format('truetype'), url('../fonts/BebasNeueRegular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+//Подключение шрифтов=================================================================================================================
+//Шрифт по умолчанию==================================================================================================================
+$fontfamily: "PT Sans";
+body{
+	font-family: $fontfamily;
+}
+//Шрифт по умолчанию==================================================================================================================
+//Переменные==========================================================================================================================
+$minwidth: 320px;
+$mw: 880;
+$md1: $mw + 12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+//Переменные===========================================================================================================================
+
+//Основная сетка=======================================================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md1+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//Основная сетка========================================================================================================================
+
+//Стили Основного Блока==================================================
+.private {
+	@include flexbox();
+	margin: 0px 0px 75px 0px;
+}
+.private__column {
+	flex:0 0 50%;
+	background-color: #000;
+}
+.private__image {
+	width: 100%;
+}
+.private-body {
+	padding: 75px 0px 75px 0px;
+	margin: 0px 0px 0px 60px;
+}
+.private-body-content{
+	max-width: 375px;
+}
+
+.private-body__title {
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 5px;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	font-size: 50px;
+	margin: 0px 0px 30px 0px;
+}
+.private-body__text {
+	font-size: 15px;
+	line-height: 25px;
+	color: #fff;
+	margin: 0px 0px 50px 0px;
+}
+.private-body-buttons {
+	@include flexbox();
+	align-items: center;
+}
+.private-body-buttons__item {}
+.private-body-buttons__link {
+	color: #fffffe;
+	font-family: 'Bebas';
+	font-size: 15px;
+	text-decoration: underline;
+	text-transform: uppercase;
+	margin: 0px 0px 0px 15px;
+	letter-spacing: 1.5px;
+}
+
+
+//=================================================
+.products {
+	margin: 0px 0px 40px 0px;
+}
+.products-body {
+	@include flexbox();
+}
+.products__column {
+	flex: 0 0 25%;
+	margin: 0px 0px 40px 0px;
+}
+.products-item {
+	@include flexbox();
+	height: 100%;
+	flex-direction: column;
+}
+.products-item__image {
+	display: block;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 25px 0px;
+}
+.products-item__title {
+	padding: 0px 10px 0px 0px;
+	max-width: 185px;
+	display: block;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	color: #000;
+	font-size: 25px;
+	margin: 0px 0px 30px 0px;
+}
+.products-item__text {
+	flex: 1 1 auto;
+	padding: 0px 10px 0px 0px;
+	max-width: 185px;
+	font-size: 15px;
+	line-height: 25px;
+	margin: 0px 0px 25px 0px;
+}
+.products-item_btn {
+	margin: 0px 0px 29px 0px;
+}
+.products-item__link {
+	font-family: 'Bebas';
+	text-transform: uppercase;
+	color: #000;
+	text-decoration: underline;
+	font-size: 15px;
+	letter-spacing: 1.5px;
+}
+//================================================================================
+.why {}
+.why-top {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #000;
+
+}
+.why-top__column {
+	flex: 0 0 50%;
+	margin: 0px 0px 0px 0px;
+}
+.why-top__text {
+	color: #fff;
+	text-align: right;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	font-size: 50px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin: 75px 60px 0px 0px;
+}
+.why-top__image {
+	width: 100%;
+}
+.why-body {
+	@include flexbox();
+	padding: 50px 0px 0px 0px;
+	width: 100%;
+	background-color: #ebebeb;
+}
+.why-body-row{
+	@include flexbox();
+	flex-wrap: wrap;
+	margin: 0px 0px 0px 0px;
+
+}
+.why-body__column {
+	flex: 0 0 50%;
+	display:flex;
+	flex-wrap:wrap;
+	margin: 20px 0px 40px 0px;
+}
+.why-body-item {
+	@include flexbox();
+}
+.why-body-item__icons {
+	flex: 0 0 100px;
+	height: 100px;
+	@include flexbox();
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+	margin: 0px 0px 0px 0px;
+}
+.why-body-item-body {
+	flex: 1 1 50%;
+	@include flexbox();
+	flex-direction: column;
+	padding: 0px 0px 0px 11px;
+}
+.why-body-item-body__title {
+	flex: 1 1 auto;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-size: 25px;
+}
+.why-body-item-body__text {
+	font-size: 15px;
+	padding: 0px 15px 0px 0px;
+	line-height: 25px;
+}
+//=======================================================================
+.contacts {
+	padding: 80px 0px 0px 0px;
+}
+.contacts-top {}
+.contacts-title {
+	display: block;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	text-transform: uppercase;
+	font-size: 50px;
+	letter-spacing: 5px;
+	margin: -20px 0px 50px 0px;
+}
+.contacts-body {
+	@include flexbox();
+	flex-wrap: wrap;
+}
+.contacts-body__column {
+	flex: 0 0 50%;
+	margin: 0px 0px 20px 0px;
+}
+.contacts-body__item {
+	font-size: 15px;
+	color: #000;
+	display: inline-block;
+	line-height: 27px;
+	padding: 0px 0px 0px 35px;
+}
+.contacts-body__item--1 {
+	background: url('../img/contacts/01.svg')left no-repeat;
+}
+.contacts-body__item--2 {
+	background: url('../img/contacts/02.svg')left no-repeat;
+}
+.contacts-body__item--3 {
+	background: url('../img/contacts/phone.svg')left no-repeat;
+}
+
+.contacts-social {
+	@include flexbox();
+}
+.contacts-social__item {
+	margin: 0px 30px 0px 0px;
+	&:last-child{
+		margin: 0px 0px 0px 0px;
+	}
+}
+.contacts-content {
+	@include flexbox();
+	background-color: #000;
+}
+.contacts-content__column {
+	flex: 0 0 50%;
+}
+.contacts-content__map {
+	height: 100%;
+}
+.contacts-content-form {
+	margin: 54px 50px 50px 60px;
+}
+.contacts-content-form-title {
+	flex: 1 1 auto;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 2.5px;
+	font-size: 25px;
+}
+.contacts-content-form-body {
+	max-width: 375px;
+}
+.contacts-content-form-line {
+	margin: 30px 0px 25px 0px;
+}
+.contacts-content-form-button {}
+.contacts-content-form_btn {}
+//Стили Основного Блока==================================================
+
+
+//Подключение файлов стилей страниц и элементов==========================================================================================
+@import "header.scss";
+@import "footer.scss";
+@import "mixins.scss";
+//Подключение файлов стилей страниц и элементов==========================================================================================
+
+//Подключение файлов UI стилей, форм и готовых класов====================================================================================
+@import "forms.scss";
+@import "ui.scss";
+//Подключение файлов UI стилей, форм и готовых класов====================================================================================
